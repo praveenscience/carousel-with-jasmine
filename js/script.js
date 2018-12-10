@@ -11,3 +11,14 @@ function loadImages(cb) {
 			cb();
 	});
 }
+
+$(function () {
+	$(".prev-button, .next-button").click(function (e) {
+		e.preventDefault();
+		if (this.classList.hasClass("prev-button")) {
+			// Previous
+		} else {
+			// Next
+		}
+	});
+});

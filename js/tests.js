@@ -15,6 +15,14 @@ $(function () {
 		it("should have an unordered list with class carousel.", function () {
 			expect($("ul.carousel").length).toBe(1);
 		});
+		it("should have a previous button and next button.", function () {
+			expect($(".prev-button").length).toBe(1);
+			expect($(".next-button").length).toBe(1);
+		});
+		it("should have previous next button event handlers.", function () {
+			expect(typeof $(".prev-button").click).toBe("function");
+			expect(typeof $(".next-button").click).toBe("function");
+		});
 	});
 	describe("Fetching Images from API", function () {
 		// This is an async request to fetch all the images from API.
@@ -23,7 +31,7 @@ $(function () {
 				done();
 			});
 		});
-		it("should have at least some images", function () {
+		it("should have at least some images.", function () {
 			expect($("ul.carousel li").length).toBeGreaterThan(0);
 		});
 	});

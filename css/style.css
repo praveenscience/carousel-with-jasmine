@@ -5,6 +5,16 @@ body {font-family: 'Ropa Sans';}
 /* Heading */
 h1 {color: #01669a; padding: 15px; background-color: #e9efe7;}
 
+/* Carousel */
+.carousel-wrapper {position: relative;}
+.carousel {overflow: hidden; white-space: nowrap;}
+.carousel li {display: inline-block; margin: 10px;}
+.carousel li img {max-width: 100%; max-height: 225px;}
+.prev-button, .next-button {position: absolute; top: 50%; left: 10px; margin-top: -25px;}
+.next-button {left: auto; right: 10px;}
+.prev-button img, .next-button img {height: 50px;}
+.prev-button img {-webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg);}
+
 /* Jasmine Overrides */
 body {overflow: auto;}
 .jasmine_html-reporter {margin: 0; position: fixed; left: 0; right: 0; bottom: 0;}
