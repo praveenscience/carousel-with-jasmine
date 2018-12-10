@@ -16,8 +16,8 @@ $(function () {
 			expect($("ul.carousel").length).toBe(1);
 		});
 		it("should have a previous button and next button.", function () {
-			expect($(".prev-button").length).toBe(1);
-			expect($(".next-button").length).toBe(1);
+			expect($(".prev-button").length).toBe(2);
+			expect($(".next-button").length).toBe(2);
 		});
 		it("should have previous next button event handlers.", function () {
 			expect(typeof $(".prev-button").click).toBe("function");
