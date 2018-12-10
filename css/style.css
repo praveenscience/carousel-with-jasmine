@@ -2,6 +2,16 @@
 * {margin: 0; padding: 0; list-style: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; line-height: 1;}
 body {font-family: 'Ropa Sans';}
 
+/* Heading */
+h1 {color: #01669a; padding: 15px; background-color: #e9efe7;}
+
 /* Jasmine Overrides */
 body {overflow: auto;}
 .jasmine_html-reporter {margin: 0; position: fixed; left: 0; right: 0; bottom: 0;}
+
+/* Media Queries */
+@media screen and (max-width: 767px) {
+	h1 {
+		padding-bottom: 2em;
+	}
+}

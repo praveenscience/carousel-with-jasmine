@@ -11,4 +11,9 @@ $(function () {
 			expect(typeof expect).toBe("function");
 		});
 	});
+	describe("Carousel", function () {
+		it("should have an unordered list with class carousel.", function () {
+			expect($("ul.carousel").length).toBe(1);
+		});
+	});
 });
