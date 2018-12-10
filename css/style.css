@@ -6,9 +6,9 @@ body {font-family: 'Ropa Sans';}
 h1 {color: #01669a; padding: 15px; background-color: #e9efe7;}
 
 /* Carousel */
-.carousel-wrapper {position: relative;}
-.carousel {overflow: hidden; white-space: nowrap;}
-.carousel li {display: inline-block; margin: 10px;}
+.carousel-wrapper {position: relative; overflow: hidden;}
+.carousel {position: relative; white-space: nowrap; -webkit-transition: all 0.5s linear; -o-transition: all 0.5s linear; transition: all 0.5s linear;}
+.carousel li {display: inline-block; margin: 10px; position: relative; text-align: center;}
 .carousel li img {max-width: 100%; max-height: 225px;}
 .prev-button, .next-button {position: absolute; top: 50%; left: 10px; margin-top: -25px;}
 .next-button {left: auto; right: 10px;}

@@ -13,12 +13,23 @@ function loadImages(cb) {
 }
 
 $(function () {
+	$("ul.carousel").first().css("left", 0);
 	$(".prev-button, .next-button").click(function (e) {
 		e.preventDefault();
-		if (this.classList.hasClass("prev-button")) {
-			// Previous
+		var $firstLi = $("ul.carousel").first();
+		// Add 20 with the width, as outerWidth or any width doesn't calc margins.
+		var firstLiWd = $firstLi.find("li").first().outerWidth() + 20;
+		$("ul.carousel li").width($firstLi.find("li").first().outerWidth());
+		// First slide?
+		var isFirstSlide = $firstLi.position().left == 0;
+		if ($(this).hasClass("prev-button")) {
+			// Don't go previous if first slide.
+			if (isFirstSlide)
+				return false;
+			$firstLi.css("left", $firstLi.position().left + firstLiWd);
 		} else {
 			// Next
+			$firstLi.css("left", $firstLi.position().left - firstLiWd);
 		}
 	});
 });
