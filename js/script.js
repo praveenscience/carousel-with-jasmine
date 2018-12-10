@@ -3,7 +3,7 @@ function loadImages(cb) {
 		$.each(res.hits, function (index, image) {
 			$("ul.carousel").append(function () {
 				$li = $("<li />");
-				$li.html('<img src="' + image.webformatURL + '" alt="' + image.type + '" />');
+				$li.html('<img src="' + image.webformatURL + '" alt="' + image.type + '" /><p class="meta">' + image.user + ' <em>(' + image.likes + ')</em></p>');
 				return $li;
 			});
 		});
@@ -21,7 +21,7 @@ $(function () {
 		var firstLiWd = $firstLi.find("li").first().outerWidth() + 20;
 		$("ul.carousel li").width($firstLi.find("li").first().outerWidth());
 		// First slide?
-		var isFirstSlide = $firstLi.position().left == 0;
+		var isFirstSlide = $firstLi.position().left >= 0;
 		if ($(this).hasClass("prev-button")) {
 			// Don't go previous if first slide.
 			if (isFirstSlide)

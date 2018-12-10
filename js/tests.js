@@ -34,5 +34,8 @@ $(function () {
 		it("should have at least some images.", function () {
 			expect($("ul.carousel li").length).toBeGreaterThan(0);
 		});
+		it("should have metadata for images.", function () {
+			expect($("ul.carousel li").length).toBe($("ul.carousel li .meta").length);
+		});
 	});
 });
